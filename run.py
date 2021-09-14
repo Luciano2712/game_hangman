@@ -4,4 +4,9 @@
 import random
 from words import words
 
-print(words)
+def get_valid_word(words):
+    word = random.choice(words) #randomly chooses a word from the list
+    while "-" in word or " " in word:
+        word = random.choice(words) #loops trhough the list getting only valid words
+
+    return word.upper() #return valid word and uppercase it to make it standard
