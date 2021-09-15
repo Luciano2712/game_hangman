@@ -15,13 +15,17 @@ def get_valid_word(words):
 
 # Keep track of possible guesses and letters already guessed
 def hangman():
+    # Add a counter for lives
+    lives = 7
+
     word = get_valid_word(words)  # Call get_valid_word function
     word_letters = set(word)  # Set of letters in the word
     alphabet = set(string.ascii_uppercase)  # Import pre-dertermined list
     used_letters = set()  # Keep track of what user has guessed
 
-    while len(word_letters) > 0:  # Loops until all letters are found
+    while len(word_letters) > 0 and lives > 0:  # Loops until finds all letters
         # Join and print letters already used
+        print(f"You have {lives} lives left!")
         print("You have used these letters: ", " ".join(used_letters))
         # Show what current word is
         word_l = [letter if letter in used_letters else "-" for letter in word]
@@ -33,13 +37,19 @@ def hangman():
             if user_letter in word_letters:
                 word_letters.remove(user_letter)  # Remove letter from word
 
+            else:
+                lives = lives - 1  # Removes a life if wrong
+                print("Letter is not in word.")
+
         elif user_letter in used_letters:  # Check for repeated letters
             print("\nYou have already used this letter. Please try again: ")
 
         else:  # Check for invalid characteres
             print("\nInvalid character. Please try again: ")
     # Print when the word is guessed correctly
-    if len(word_letters) == 0:
+    if lives == 0:
+        print("You lost, sorry. The word was", word)
+    elif len(word_letters) == 0:
         print("\nCongratulations ** YOU WON **")
         print("The word is", word)
 
