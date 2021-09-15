@@ -31,7 +31,7 @@ def hangman():
         word_l = [letter if letter in used_letters else "-" for letter in word]
         print("\nSecret word: ", " ".join(word_l))
         # Getting user input
-        user_letter = input("\nGuess a letter: ").upper()  # User Input
+        user_letter = input("Guess a letter: \n").upper()  # User Input
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)  # Add valid letter
             if user_letter in word_letters:
