@@ -25,6 +25,7 @@ def hangman():
 
     while len(word_letters) > 0 and lives > 0:  # Loops until finds all letters
         # Join and print letters already used
+        print("*** Welcome to Hangman Game ***")
         print(f"You have {lives} lives left!")
         print("You have used these letters: ", " ".join(used_letters))
         # Show what current word is
