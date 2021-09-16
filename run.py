@@ -27,12 +27,12 @@ def hangman():
         # Join and print letters already used
         print("*** Welcome to Hangman Game ***")
         print(f"You have {lives} lives left!")
-        print("You have used these letters: ", " ".join(used_letters))
+        print("Misses: ", " ".join(used_letters))
         # Show what current word is
         word_l = [letter if letter in used_letters else "-" for letter in word]
-        print("\nSecret word: ", " ".join(word_l))
+        print("Secret Word: ", " ".join(word_l))
         # Getting user input
-        user_letter = input("Guess a letter: \n").upper()  # User Input
+        user_letter = input("Your Guess:").upper()  # User Input
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)  # Add valid letter
             if user_letter in word_letters:
