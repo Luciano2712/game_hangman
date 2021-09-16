@@ -55,7 +55,7 @@ Solve the puzzle before the hangman dies.
 Manually tested this project by doing the following:
 
 - Passed the code through PEP8 online validator.
-- Tested with differnt inputs to check the response message efectivenes.
+- Tested with different inputs to check the response message efectivenes.
 - Tested in Code institute Heroku terminal.
 
 ### Validator Testing
