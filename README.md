@@ -40,15 +40,30 @@ Solve the puzzle before the hangman dies.
   - Decreases life on missed guesses.
   - Displays blank spaces to be fullfiled with letters.
 
+  ![Heading](images_README/game_page.png)
+
 - __Input_validation_and_error_checking__
 
   - Checks for input and gives a message if letter was already guessed, if not a valid character and if guess is right or wrong.
   - Displays a set list with already used letters to avoid repetition.
   - Displays the right guessed letters.
 
+  ![Heading](images_README/validation_message.jpg)
+
+- __Greeting_message__
+
+  - Congratulates player if player wins.
+  - Displays sorry message if computer wins.
+
+  ![Heading](images_README/end_game.jpg)
+
 ### Features Left to Implement
 
 - I would like to have included some sort of animation where you can actually see the hangman being built.
+
+## Data
+
+- I decided to use a list of more than 5000 words as a source to feed my project with randomly selected words in order to keep the game with good user experience and without becoming easily repetitive. This list was created in a file named "words.py" which holds a variable named "words" to whom the list of words was assigned to. This list was taken from stackoverflow and is used by calling the import method.
 
 ## Testing
 
@@ -87,3 +102,4 @@ The live link can be found here - <https://hangman-game-python.herokuapp.com/>
 - To create this program, I relied heavily on the material covered in the Full Stack Development course by Code Institute. I also used Online Web Tutorials. I learnt the course material but did have to refer to additional YouTube videos to get a better understanding.
 - Code Institute for the deployment terminal.
 - Wikipedia for details of the hangman game.
+- Stackoverflow for the word list (words.py).

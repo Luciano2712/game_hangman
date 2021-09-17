@@ -55,6 +55,7 @@ def hangman():
         print("The word is", word)
 
 
+# Run the game again
 while True:
     # Call function for the game to start
     hangman()
